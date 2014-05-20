@@ -30,8 +30,7 @@ public class AutoImageSearch {
 		// driver.navigate().to("http://www.google.com");
 
 		// click to open the input box for entering image url
-		WebElement openImageInputBox =
-			driver.findElement(By.xpath("//div[@id='gs_st0']//a"));
+		WebElement openImageInputBox =driver.findElement(By.xpath("//div[@id='gs_st0']//a"));
 		openImageInputBox.click();
 
 		// input id="qbui" name="image_url"
