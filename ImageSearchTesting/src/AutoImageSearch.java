@@ -152,7 +152,7 @@ public class AutoImageSearch {
 		
 		int overlap1_B = 0;
 //		sampleA = sample3;
-		for (int i = 3; i<=3; i++){
+		for (int i = 3; i<=200; i++){
 		
 			sampleB = imgSearcher.search(sample1[i], numOfRecords);
 			overlap1_B = imgSearcher.calculateOverlap(sample1, sampleB);
