@@ -89,8 +89,8 @@ public class AutoImageSearch {
 		List<WebElement> resultsImgTags =
 			driver.findElements(By.xpath("//div[@class='rg_di']//a//img"));
 		int sizeOfImgTags = resultsImgTags.size();
-		System.out.println("The number of <img> tags: " + sizeOfImgTags);
-		System.out.println();
+//		System.out.println("The number of <img> tags: " + sizeOfImgTags);
+//		System.out.println();
 
 		String imgUrl = null;
 		String[] sampleImgUrl = new String[numOfRecords];
@@ -102,12 +102,12 @@ public class AutoImageSearch {
 																// in src=""
 			sampleImgUrl[i] = imgUrl;
 
-			System.out.format("img URL %d : %s", i, imgUrl);
-			System.out.println();
+//			System.out.format("img URL %d : %s", i, imgUrl);
+//			System.out.println();
 			imgUrl = null;
 
 		}
-		System.out.println("\n\n");
+//		System.out.println("\n\n");
 		driver.quit();
 		return sampleImgUrl;
 
@@ -135,18 +135,33 @@ public class AutoImageSearch {
 		String[] sample1 = new String[numOfRecords];
 		String[] sample2 = new String[numOfRecords];
 		String[] sample3 = new String[numOfRecords];
+		String[] sampleA = new String[numOfRecords];
+		String[] sampleB = new String[numOfRecords];
 		
 		AutoImageSearch imgSearcher = new AutoImageSearch();
 		sample1 = imgSearcher.search(inputImg, numOfRecords);
 		sample2 = imgSearcher.search(sample1[1], numOfRecords);
 		sample3 = imgSearcher.search(sample1[2], numOfRecords);
 		
-		System.out.println(String.format("Overlap of sample1 and sample2: %d %%  " , imgSearcher.calculateOverlap(sample1, sample2) * 100/numOfRecords));
+		int overlap12 = imgSearcher.calculateOverlap(sample1, sample2);
+		int overlap13 = imgSearcher.calculateOverlap(sample1, sample3);
+		int overlap23 = imgSearcher.calculateOverlap(sample2, sample3);
+		System.out.println(String.format("Overlap of sample1 and sample2: %d %% [%d/%d] " , overlap12 * 100/numOfRecords, overlap12, numOfRecords));
+		System.out.println(String.format("Overlap of sample1 and sample3: %d %% [%d/%d] " ,  overlap13 * 100/numOfRecords, overlap13, numOfRecords));
+		System.out.println(String.format("Overlap of sample2 and sample3: %d %% [%d/%d] " ,  overlap23 * 100/numOfRecords, overlap23, numOfRecords));
 		
-		System.out.println("Overlap of sample2 and sample3: " + imgSearcher.calculateOverlap(sample2, sample3)/numOfRecords);
-
-		System.out.println("Overlap of sample1 and sample3: " + imgSearcher.calculateOverlap(sample1, sample3)/numOfRecords);
+		int overlapAB = 0;
+		sampleA = sample3;
+		for (int i = 3; i<=10; i++){
 		
+			sampleB = imgSearcher.search(sample1[i], numOfRecords);
+			overlapAB = imgSearcher.calculateOverlap(sampleA, sampleB);
+			System.out.println(String.format("Overlap of sample %d and sample %d:      %d %% [%d/%d] " , i, i+1, overlapAB * 100/numOfRecords, overlapAB, numOfRecords));
+			overlapAB = 0;
+			sampleA = sampleB;
+			sampleB = null;
+			
+		}
 		
 	}
 }
