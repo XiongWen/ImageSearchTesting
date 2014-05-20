@@ -135,7 +135,7 @@ public class AutoImageSearch {
 		String[] sample1 = new String[numOfRecords];
 		String[] sample2 = new String[numOfRecords];
 		String[] sample3 = new String[numOfRecords];
-		String[] sampleA = new String[numOfRecords];
+//		String[] sampleA = new String[numOfRecords];
 		String[] sampleB = new String[numOfRecords];
 		
 		AutoImageSearch imgSearcher = new AutoImageSearch();
@@ -146,19 +146,19 @@ public class AutoImageSearch {
 		int overlap12 = imgSearcher.calculateOverlap(sample1, sample2);
 		int overlap13 = imgSearcher.calculateOverlap(sample1, sample3);
 		int overlap23 = imgSearcher.calculateOverlap(sample2, sample3);
-		System.out.println(String.format("Overlap of sample1 and sample2: %d %% [%d/%d] " , overlap12 * 100/numOfRecords, overlap12, numOfRecords));
-		System.out.println(String.format("Overlap of sample1 and sample3: %d %% [%d/%d] " ,  overlap13 * 100/numOfRecords, overlap13, numOfRecords));
-		System.out.println(String.format("Overlap of sample2 and sample3: %d %% [%d/%d] " ,  overlap23 * 100/numOfRecords, overlap23, numOfRecords));
+		System.out.println(String.format("Overlap of sample1 and sample2:   %d %% [%d/%d] " , overlap12 * 100/numOfRecords, overlap12, numOfRecords));
+		System.out.println(String.format("Overlap of sample1 and sample3:   %d %% [%d/%d] " ,  overlap13 * 100/numOfRecords, overlap13, numOfRecords));
+		System.out.println(String.format("Overlap of sample2 and sample3:   %d %% [%d/%d] " ,  overlap23 * 100/numOfRecords, overlap23, numOfRecords));
 		
-		int overlapAB = 0;
-		sampleA = sample3;
-		for (int i = 3; i<=10; i++){
+		int overlap1_B = 0;
+//		sampleA = sample3;
+		for (int i = 3; i<=3; i++){
 		
 			sampleB = imgSearcher.search(sample1[i], numOfRecords);
-			overlapAB = imgSearcher.calculateOverlap(sampleA, sampleB);
-			System.out.println(String.format("Overlap of sample %d and sample %d:      %d %% [%d/%d] " , i, i+1, overlapAB * 100/numOfRecords, overlapAB, numOfRecords));
-			overlapAB = 0;
-			sampleA = sampleB;
+			overlap1_B = imgSearcher.calculateOverlap(sample1, sampleB);
+			System.out.println(String.format("Overlap of sample1 and sample%d:   %d %% [%d/%d] ", i+1, overlap1_B * 100/numOfRecords, overlap1_B, numOfRecords));
+			overlap1_B = 0;
+//			sampleA = sampleB;
 			sampleB = null;
 			
 		}
