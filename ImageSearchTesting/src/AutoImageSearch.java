@@ -34,13 +34,13 @@ public class AutoImageSearch {
 		openImageInputBox.click();
 
 		// input id="qbui" name="image_url"
-		// try {
-		// Thread.sleep(100);
-		// }
-		// catch (InterruptedException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
+//		 try {
+//		 Thread.sleep(400);
+//		 }
+//		 catch (InterruptedException e) {
+//		 // TODO Auto-generated catch block
+//		 e.printStackTrace();
+//		 }
 		//
 
 		WebElement input = driver.findElement(By.name("image_url"));
@@ -53,7 +53,7 @@ public class AutoImageSearch {
 
 		submit.click();
 		try {
-			Thread.sleep(100);
+			Thread.sleep(300);
 		}
 		catch (InterruptedException e) {
 			// TODO Auto-generated catch block
