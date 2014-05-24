@@ -28,6 +28,7 @@ public class TestCaseReader {
 	 * @param fileName
 	 *            The file name where the test cases stored
 	 * @return input A list of image URLs
+	 * @author Xiong Wen (xw926@uowmail.edu.au)
 	 * @throws IOException
 	 */
 	public static List<String> read(String fileName)

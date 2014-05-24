@@ -12,6 +12,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ *This class is for web search engine (Baidu image search: http://image.baidu.com/) testing, 
+ *it tests the overlap rate of image URLs from resulting pages of image search.
+ * @author Xiong Wen (xw926@uowmail.edu.au)
+ */
 public class BaiduImageSearch extends AutoImageSearch {
 
 	/*

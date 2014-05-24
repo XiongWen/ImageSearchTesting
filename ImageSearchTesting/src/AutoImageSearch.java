@@ -1,8 +1,3 @@
-/**
- *This class is for web search engine testing, 
- *it tests the overlap rate of image URLs from resulting pages of image search
- * @author Xiong Wen (xw926@uowmail.edu.au)
- */
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,6 +10,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+/**
+ *This class is for web search engine (Google image search: http://images.google.com/) testing, 
+ *it tests the overlap rate of image URLs from resulting pages of image search.
+ * @author Xiong Wen (xw926@uowmail.edu.au)
+ */
 public class AutoImageSearch {
 
 	/**
