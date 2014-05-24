@@ -1,6 +1,6 @@
 /**
  *This class is for web search engine testing, 
- *it tests the overlap rate of image URLs from resulting pages of images search
+ *it tests the overlap rate of image URLs from resulting pages of image search
  * @author Xiong Wen (xw926@uowmail.edu.au)
  */
 import java.io.BufferedWriter;
@@ -14,8 +14,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.openqa.selenium.support.ui.ExpectedCondition;
-//import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AutoImageSearch {
 
@@ -174,7 +172,7 @@ public class AutoImageSearch {
 			
 			// do comparison between 50 samples with each sample has 200 image URLs
 			for (int j = 0; j <= 48; j++) {
-				//generate test case automatically 
+				//generate test cases automatically 
 				sampleB = imgSearcher.search(sample1.get(j), numOfRecords);
 				overlap1_B = imgSearcher.calculateOverlap(sample1, sampleB);
 				System.out.println(String.format(
