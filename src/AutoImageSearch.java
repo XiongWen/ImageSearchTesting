@@ -20,7 +20,7 @@ public class AutoImageSearch {
 	/**
 	 * This method searches images according to the given image url, then get a
 	 * sample image URLs from the resulting page
-	 * 
+	 *  
 	 * @param inpuImageLink
 	 *            The image URL for image search
 	 * @param numOfRecords
