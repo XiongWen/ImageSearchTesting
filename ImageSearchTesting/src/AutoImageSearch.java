@@ -1,7 +1,7 @@
 /**
  *This class is for web search engine testing, 
  *it tests the overlap rate of image URLs from resulting pages of images search
- * @author Shawn
+ * @author Xiong Wen (xw926@uowmail.edu.au)
  */
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -29,7 +29,7 @@ public class AutoImageSearch {
 	 *            The number of records needs to be captured for analysis
 	 * @return sampleImgUrl a sample set of image URLs captured(the number
 	 *         equals numOfRecords)
-	 * @author Shawn
+	 * @author Xiong Wen (xw926@uowmail.edu.au)
 	 * @throws InterruptedException
 	 */
 
@@ -122,7 +122,7 @@ public class AutoImageSearch {
 	 * @param sample2
 	 *            The image URLs for the other resulting pages of a image search
 	 * @return overlap The number of overlaps of image URLs
-	 * @author Shawn
+	 * @author Xiong Wen (xw926@uowmail.edu.au)
 	 */
 	public int calculateOverlap(
 		LinkedList<String> sample1, LinkedList<String> sample2) {
