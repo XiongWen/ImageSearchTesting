@@ -16,7 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * @author Xiong Wen (xw926@uowmail.edu.au)
  */
 public class AutoImageSearch {
-
+ 
 	/**
 	 * This method searches images according to the given image url, then get a
 	 * sample image URLs from the resulting page

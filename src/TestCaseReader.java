@@ -20,7 +20,7 @@ import java.util.List;
 public class TestCaseReader {
 
 	final static Charset ENCODING = StandardCharsets.UTF_8;
-
+ 
 	/**
 	 * This method reads test cases from a text file, each line in the file is a
 	 * image URL
