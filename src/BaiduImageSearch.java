@@ -114,7 +114,7 @@ public class BaiduImageSearch extends AutoImageSearch {
 		LinkedList<String> sample1 = new LinkedList<String>();
 		LinkedList<String> sampleB = new LinkedList<String>();
 
-		String resultFileName = "BaiduResult.txt";
+		String resultFileName = "BaiduResults.txt";
 		// open file
 		FileWriter fileWriter = new FileWriter(resultFileName);
 		BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);

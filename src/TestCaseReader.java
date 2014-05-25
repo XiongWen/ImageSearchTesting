@@ -69,13 +69,13 @@ public class TestCaseReader {
 
 	public static void main(String[] args) throws IOException {
 
-		String fileName1 = "C1.txt";
+		String fileName1 = "InputTestCases.txt";
 		List<String> input1 = null;
 		// TestCaseReader reader = new TestCaseReader();
 
 		input1 = TestCaseReader.read(fileName1);
 
-		String fileName = "out1.txt";
+		String fileName = "outForTestCaseReader.txt";
 		FileWriter fileWriter = new FileWriter(fileName);
 		BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 		//a test for writing content to a file

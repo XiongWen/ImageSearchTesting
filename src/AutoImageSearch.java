@@ -149,8 +149,8 @@ public class AutoImageSearch {
 		LinkedList<String> sample1 = new LinkedList<String>();
 		LinkedList<String> sampleB = new LinkedList<String>();
 
-		String inputFileName = "C5.txt";
-		String resultFileName = "result5.txt";
+		String inputFileName = "InputTestCases.txt";
+		String resultFileName = "GoogleResults.txt";
 		
 		//open file
 		FileWriter fileWriter = new FileWriter(resultFileName);
